@@ -2,8 +2,12 @@
 
 ## Run the COBOL
 
-1. Build the image: `docker build -t investment-value .`
-2. Run the compiled script: `docker run -it investment-value dist/invest`
+1. Build the image: `docker build -t cobol-container .`
+2. Run the script that interests you
+* `docker run -it cobol-container dist/invest`
+* `docker run -it cobol-container dist/report`
+
+NOTE: Check out the `Dockerfile` to see what scripts are available.
 
 ## Cleanup!
 
@@ -12,4 +16,4 @@ you don't use the `-t` flag to write them to the same name. They will take up
 space on your hardrive quickly.
 
 1. Check out what images you have on board: `docker images`
-2. Delete them: `docker rmi <image-id>`
+2. Delete them: `script/clean.sh`
